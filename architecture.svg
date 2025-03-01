@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Collectible Authentication Platform Architecture</text>
+  
+  <!-- System Components -->
+  <!-- Authentication Layer -->
+  <rect x="50" y="100" width="250" height="240" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5" ry="5"/>
+  <text x="175" y="125" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Authentication Layer</text>
+  
+  <rect x="70" y="140" width="210" height="40" fill="#ffffff" stroke="#1890ff" stroke-width="1" rx="3" ry="3"/>
+  <text x="175" y="157" font-family="Arial" font-size="12" text-anchor="middle">LuxServiceManager</text>
+  <text x="175" y="173" font-family="Arial" font-size="12" text-anchor="middle">(Smart Contract)</text>
+  
+  <rect x="70" y="190" width="210" height="40" fill="#ffffff" stroke="#1890ff" stroke-width="1" rx="3" ry="3"/>
+  <text x="175" y="215" font-family="Arial" font-size="14" text-anchor="middle">AuthenticationController</text>
+  
+  <!-- AI Agent and Eigenlayer Components -->
+  <rect x="70" y="240" width="95" height="80" fill="#f0f5ff" stroke="#597ef7" stroke-width="1" rx="3" ry="3"/>
+  <text x="117" y="270" font-family="Arial" font-size="12" text-anchor="middle">Eigenlayer AVS</text>
+  <text x="117" y="290" font-family="Arial" font-size="12" text-anchor="middle">Operators</text>
+  
+  <rect x="185" y="240" width="95" height="80" fill="#f0f5ff" stroke="#597ef7" stroke-width="1" rx="3" ry="3"/>
+  <text x="232" y="270" font-family="Arial" font-size="12" text-anchor="middle">AI Authentication</text>
+  <text x="232" y="290" font-family="Arial" font-size="12" text-anchor="middle">Agents</text>
+  
+  <!-- Collectible Registry -->
+  <rect x="325" y="100" width="250" height="240" fill="#f6ffed" stroke="#52c41a" stroke-width="2" rx="5" ry="5"/>
+  <text x="450" y="125" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Collectible Registry</text>
+  
+  <rect x="345" y="140" width="210" height="40" fill="#ffffff" stroke="#52c41a" stroke-width="1" rx="3" ry="3"/>
+  <text x="450" y="157" font-family="Arial" font-size="12" text-anchor="middle">CollectibleRegistry</text>
+  <text x="450" y="173" font-family="Arial" font-size="12" text-anchor="middle">(Smart Contract)</text>
+  
+  <rect x="345" y="190" width="210" height="40" fill="#ffffff" stroke="#52c41a" stroke-width="1" rx="3" ry="3"/>
+  <text x="450" y="215" font-family="Arial" font-size="14" text-anchor="middle">Provenance Records</text>
+  
+  <rect x="345" y="240" width="95" height="80" fill="#f6ffed" stroke="#52c41a" stroke-width="1" rx="3" ry="3"/>
+  <text x="392" y="270" font-family="Arial" font-size="12" text-anchor="middle">IPFS Storage</text>
+  <text x="392" y="290" font-family="Arial" font-size="12" text-anchor="middle">(Images)</text>
+  
+  <rect x="460" y="240" width="95" height="80" fill="#f6ffed" stroke="#52c41a" stroke-width="1" rx="3" ry="3"/>
+  <text x="507" y="270" font-family="Arial" font-size="12" text-anchor="middle">IPFS Storage</text>
+  <text x="507" y="290" font-family="Arial" font-size="12" text-anchor="middle">(Documents)</text>
+  
+  <!-- NFT and Marketplace -->
+  <rect x="600" y="100" width="250" height="240" fill="#fff2e8" stroke="#fa8c16" stroke-width="2" rx="5" ry="5"/>
+  <text x="725" y="125" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">NFT and Marketplace</text>
+  
+  <rect x="620" y="140" width="210" height="40" fill="#ffffff" stroke="#fa8c16" stroke-width="1" rx="3" ry="3"/>
+  <text x="725" y="157" font-family="Arial" font-size="12" text-anchor="middle">NFCLuxuryMarketplace</text>
+  <text x="725" y="173" font-family="Arial" font-size="12" text-anchor="middle">(Smart Contract)</text>
+  
+  <rect x="620" y="190" width="210" height="40" fill="#ffffff" stroke="#fa8c16" stroke-width="1" rx="3" ry="3"/>
+  <text x="725" y="207" font-family="Arial" font-size="12" text-anchor="middle">NFCCardFactory</text>
+  <text x="725" y="223" font-family="Arial" font-size="12" text-anchor="middle">(Smart Contract)</text>
+  
+  <rect x="620" y="240" width="95" height="80" fill="#fff2e8" stroke="#fa8c16" stroke-width="1" rx="3" ry="3"/>
+  <text x="667" y="270" font-family="Arial" font-size="12" text-anchor="middle">NFT</text>
+  <text x="667" y="290" font-family="Arial" font-size="12" text-anchor="middle">Management</text>
+  
+  <rect x="735" y="240" width="95" height="80" fill="#fff2e8" stroke="#fa8c16" stroke-width="1" rx="3" ry="3"/>
+  <text x="782" y="270" font-family="Arial" font-size="12" text-anchor="middle">NFC Tag</text>
+  <text x="782" y="290" font-family="Arial" font-size="12" text-anchor="middle">Integration</text>
+  
+  <!-- Physical World Layer -->
+  <rect x="50" y="370" width="250" height="80" fill="#ffd6e7" stroke="#eb2f96" stroke-width="2" rx="5" ry="5"/>
+  <text x="175" y="395" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Physical World</text>
+  
+  <rect x="70" y="410" width="95" height="30" fill="#ffffff" stroke="#eb2f96" stroke-width="1" rx="3" ry="3"/>
+  <text x="117" y="430" font-family="Arial" font-size="12" text-anchor="middle">Collectible Items</text>
+  
+  <rect x="185" y="410" width="95" height="30" fill="#ffffff" stroke="#eb2f96" stroke-width="1" rx="3" ry="3"/>
+  <text x="232" y="430" font-family="Arial" font-size="12" text-anchor="middle">NFC-Embedded Tags</text>
+  
+  <!-- User Interaction Layer -->
+  <rect x="325" y="370" width="525" height="80" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" rx="5" ry="5"/>
+  <text x="587" y="395" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">User Interaction Layer</text>
+  
+  <rect x="345" y="410" width="95" height="30" fill="#ffffff" stroke="#722ed1" stroke-width="1" rx="3" ry="3"/>
+  <text x="392" y="430" font-family="Arial" font-size="12" text-anchor="middle">Collector UI</text>
+  
+  <rect x="460" y="410" width="95" height="30" fill="#ffffff" stroke="#722ed1" stroke-width="1" rx="3" ry="3"/>
+  <text x="507" y="430" font-family="Arial" font-size="12" text-anchor="middle">Authenticator UI</text>
+  
+  <rect x="575" y="410" width="95" height="30" fill="#ffffff" stroke="#722ed1" stroke-width="1" rx="3" ry="3"/>
+  <text x="622" y="430" font-family="Arial" font-size="12" text-anchor="middle">Marketplace UI</text>
+  
+  <rect x="690" y="410" width="140" height="30" fill="#ffffff" stroke="#722ed1" stroke-width="1" rx="3" ry="3"/>
+  <text x="760" y="430" font-family="Arial" font-size="12" text-anchor="middle">Mobile NFC Scanner App</text>
+  
+  <!-- External Services -->
+  <rect x="325" y="480" width="250" height="80" fill="#f4ffb8" stroke="#a0d911" stroke-width="2" rx="5" ry="5"/>
+  <text x="450" y="505" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">External Services</text>
+  
+  <rect x="345" y="520" width="95" height="30" fill="#ffffff" stroke="#a0d911" stroke-width="1" rx="3" ry="3"/>
+  <text x="392" y="540" font-family="Arial" font-size="12" text-anchor="middle">Google Vision API</text>
+  
+  <rect x="460" y="520" width="95" height="30" fill="#ffffff" stroke="#a0d911" stroke-width="1" rx="3" ry="3"/>
+  <text x="507" y="540" font-family="Arial" font-size="12" text-anchor="middle">Eigenlayer Network</text>
+  
+  <!-- Workflow Arrows -->
+  <!-- Authentication Flow -->
+  <path d="M175 230 L175 240" stroke="#1890ff" stroke-width="2" fill="none"/>
+  <polygon points="175,240 170,230 180,230" fill="#1890ff"/>
+  
+  <path d="M117 240 L117 210" stroke="#1890ff" stroke-width="2" fill="none"/>
+  <polygon points="117,210 112,220 122,220" fill="#1890ff"/>
+  
+  <path d="M232 240 L232 210" stroke="#1890ff" stroke-width="2" fill="none"/>
+  <polygon points="232,210 227,220 237,220" fill="#1890ff"/>
+  
+  <!-- Auth to Registry -->
+  <path d="M300 160 L325 160" stroke="#333" stroke-width="3" fill="none"/>
+  <polygon points="325,160 315,155 315,165" fill="#333"/>
+  
+  <!-- Registry to NFT -->
+  <path d="M575 160 L600 160" stroke="#333" stroke-width="3" fill="none"/>
+  <polygon points="600,160 590,155 590,165" fill="#333"/>
+  
+  <!-- NFT to Physical -->
+  <path d="M735 280 L782 280" stroke="#fa8c16" stroke-width="2" fill="none"/>
+  <polygon points="782,280 772,275 772,285" fill="#fa8c16"/>
+  
+  <path d="M782 320 L232 410" stroke="#fa8c16" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="232,410 240,402 245,412" fill="#fa8c16"/>
+  
+  <!-- Physical to Authentication -->
+  <path d="M117 410 L117 320" stroke="#eb2f96" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="117,320 112,330 122,330" fill="#eb2f96"/>
+  
+  <!-- User to Components -->
+  <path d="M392 410 L175 320" stroke="#722ed1" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="175,320 182,328 186,322" fill="#722ed1"/>
+  
+  <path d="M507 410 L450 320" stroke="#722ed1" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="450,320 445,330 455,330" fill="#722ed1"/>
+  
+  <path d="M622 410 L725 320" stroke="#722ed1" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="725,320 717,328 720,332" fill="#722ed1"/>
+  
+  <!-- External Services Integration -->
+  <path d="M392 520 L232 320" stroke="#a0d911" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="232,320 236,330 242,324" fill="#a0d911"/>
+  
+  <path d="M507 520 L117 320" stroke="#a0d911" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <polygon points="117,320 124,326 126,330" fill="#a0d911"/>
+  
+  <!-- Legend -->
+  <rect x="600" y="480" width="250" height="80" fill="#fff" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+  <text x="725" y="500" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Authentication Workflow</text>
+  
+  <line x1="620" y1="520" x2="640" y2="520" stroke="#333" stroke-width="3"/>
+  <text x="730" y="525" font-family="Arial" font-size="10" text-anchor="middle">Direct Contract Interaction</text>
+  
+  <line x1="620" y1="540" x2="640" y2="540" stroke="#333" stroke-width="2" stroke-dasharray="4"/>
+  <text x="730" y="545" font-family="Arial" font-size="10" text-anchor="middle">Off-Chain / External Interaction</text>
+</svg>

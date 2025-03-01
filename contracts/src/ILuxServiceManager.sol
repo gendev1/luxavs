@@ -75,4 +75,11 @@ interface ILuxServiceManager {
         uint32 referenceTaskIndex,
         bytes calldata signature
     ) external;
+
+    /// @dev Get a specific task by index
+    /// @param taskIndex The task index to retrieve
+    /// @return The task data
+    function getTask(
+        uint32 taskIndex
+    ) external view returns (Task memory);
 }

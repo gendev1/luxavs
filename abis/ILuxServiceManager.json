@@ -1,0 +1,242 @@
+[
+  {
+    "type": "function",
+    "name": "allTaskHashes",
+    "inputs": [
+      {
+        "name": "taskIndex",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "allTaskResponses",
+    "inputs": [
+      {
+        "name": "operator",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "taskIndex",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "createNewTask",
+    "inputs": [
+      {
+        "name": "imageHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "metadataHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "documentType",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct ILuxServiceManager.Task",
+        "components": [
+          {
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "taskCreatedBlock",
+            "type": "uint32",
+            "internalType": "uint32"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "latestTaskNum",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "respondToTask",
+    "inputs": [
+      {
+        "name": "task",
+        "type": "tuple",
+        "internalType": "struct ILuxServiceManager.Task",
+        "components": [
+          {
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "taskCreatedBlock",
+            "type": "uint32",
+            "internalType": "uint32"
+          }
+        ]
+      },
+      {
+        "name": "referenceTaskIndex",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "signature",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "NewTaskCreated",
+    "inputs": [
+      {
+        "name": "taskIndex",
+        "type": "uint32",
+        "indexed": true,
+        "internalType": "uint32"
+      },
+      {
+        "name": "task",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct ILuxServiceManager.Task",
+        "components": [
+          {
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "taskCreatedBlock",
+            "type": "uint32",
+            "internalType": "uint32"
+          }
+        ]
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TaskResponded",
+    "inputs": [
+      {
+        "name": "taskIndex",
+        "type": "uint32",
+        "indexed": true,
+        "internalType": "uint32"
+      },
+      {
+        "name": "task",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct ILuxServiceManager.Task",
+        "components": [
+          {
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "taskCreatedBlock",
+            "type": "uint32",
+            "internalType": "uint32"
+          }
+        ]
+      },
+      {
+        "name": "operator",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  }
+]

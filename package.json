@@ -10,6 +10,10 @@
         "deploy:core": "cd contracts && forge script script/DeployEigenLayerCore.s.sol --rpc-url http://localhost:8545 --broadcast --optimize --optimizer-runs 200 --via-ir",
         "deploy:hello-world": "cd contracts && forge script script/HelloWorldDeployer.s.sol --rpc-url http://localhost:8545 --broadcast --optimize --optimizer-runs 200 --via-ir",
         "deploy:lux-service-manager": "cd contracts && forge script script/LuxServiceManagerDeployer.s.sol --rpc-url http://localhost:8545 --broadcast --optimize --optimizer-runs 200 --via-ir",
+        "deploy:collectible-auth": "cd contracts && forge script script/SimpleDeployer.s.sol --rpc-url http://localhost:8545 --broadcast --optimize --optimizer-runs 200 --via-ir",
+        "init:collectible-auth": "cd contracts && forge script script/InitializeContracts.s.sol --rpc-url http://localhost:8545 --broadcast --optimize --optimizer-runs 200 --via-ir",
+        "start:ai-operator": "node operator/ai-authenticator/ai-operator.js",
+        "create:test-tasks": "node operator/ai-authenticator/create-test-tasks.js",
         "deploy:core-debug": "cd contracts && forge script script/DeployEigenLayerCore.s.sol --rpc-url http://localhost:8545 --broadcast --revert-strings debug --optimize --optimizer-runs 200 --via-ir",
         "deploy:hello-world-debug": "cd contracts && forge script script/HelloWorldDeployer.s.sol --rpc-url http://localhost:8545 --broadcast --revert-strings debug",
         "create-payments-root": "cd contracts && forge script script/SetupPayments.s.sol --rpc-url http://localhost:8545 --broadcast -v --sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
@@ -21,8 +25,10 @@
         "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest"
     },
     "dependencies": {
+        "axios": "^1.8.1",
         "dotenv": "^10.0.0",
-        "ethers": "^6.13.2"
+        "ethers": "^6.13.2",
+        "form-data": "^4.0.2"
     },
     "devDependencies": {
         "@types/jest": "^29.5.13",

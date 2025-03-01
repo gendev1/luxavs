@@ -69,7 +69,8 @@ library LuxDeploymentLib {
                 core.avsDirectory,
                 result.stakeRegistry,
                 core.rewardsCoordinator,
-                core.delegationManager
+                core.delegationManager,
+                address(0)
             )
         );
 
@@ -78,7 +79,8 @@ library LuxDeploymentLib {
             abi.encodeCall(ECDSAStakeRegistry.initialize, (result.luxServiceManager, 0, quorum));
         UpgradeableProxyLib.upgradeAndCall(result.stakeRegistry, stakeRegistryImpl, upgradeCall);
 
-        upgradeCall = abi.encodeCall(LuxServiceManager.initialize, (owner, rewardsInitiator));
+        upgradeCall =
+            abi.encodeCall(LuxServiceManager.initialize, (owner, rewardsInitiator, address(0)));
         UpgradeableProxyLib.upgradeAndCall(
             result.luxServiceManager, luxServiceManagerImpl, upgradeCall
         );

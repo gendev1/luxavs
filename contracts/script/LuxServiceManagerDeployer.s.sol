@@ -7,7 +7,8 @@ import {LuxDeploymentLib} from "./utils/LuxDeploymentLib.sol";
 import {CoreDeploymentLib} from "./utils/CoreDeploymentLib.sol";
 import {UpgradeableProxyLib} from "./utils/UpgradeableProxyLib.sol";
 import {StrategyBase} from "@eigenlayer/contracts/strategies/StrategyBase.sol";
-import {ERC20Mock} from "../test/ERC20Mock.sol";
+import {ERC20Mock} from "@eigenlayer/test/mocks/ERC20Mock.sol";
+
 import {TransparentUpgradeableProxy} from
     "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol";
 import {StrategyFactory} from "@eigenlayer/contracts/strategies/StrategyFactory.sol";

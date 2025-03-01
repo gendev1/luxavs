@@ -5,7 +5,23 @@ const abiDir = 'abis';
 const contractsDir = 'contracts';
 const artifactsDir = path.join(contractsDir, 'out');
 
-const contractsToExtract = ['IAVSDirectory', 'IDelegationManager', 'ECDSAStakeRegistry', 'HelloWorldServiceManager', 'LuxServiceManager'];
+const contractsToExtract = [
+    // Original contracts
+    'IAVSDirectory',
+    'IDelegationManager',
+    'ECDSAStakeRegistry',
+    'HelloWorldServiceManager',
+    'LuxServiceManager',
+
+    // Added contracts from src directory
+    'NFCLuxuryMarketplace',
+    'AuthenticationController',
+    'CollectibleRegistry',
+    'INFCLuxuryMarketplace',
+    'NFCCardFactory',
+    'ILuxServiceManager',
+    'IHelloWorldServiceManager',
+];
 
 if (!fs.existsSync(abiDir)) {
     fs.mkdirSync(abiDir);
