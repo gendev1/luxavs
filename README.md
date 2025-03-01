@@ -1,20 +1,180 @@
-# Hello World AVS
+# Lux Protocol AI Operator
 
-Welcome to the Hello World AVS. This project shows you the simplest functionality you can expect from an AVS. It will give you a concrete understanding of the basic components. For new users, please find [this video walkthrough](https://drive.google.com/file/d/1P6uA6kYWCbpeorTjADuoTlQ-q8uqwPZf/view?usp=sharing) of the hello world AVS repository.
+A decentralized authentication system for luxury collectibles using AI and blockchain technology. This project leverages Eigenlayer's AVS (Actively Validated Service) architecture to provide secure, decentralized authentication for high-value items.
 
-## Architecture
+![Architecture Diagram](architecture.svg)
 
-![hello-world-png](./assets/hello-world-diagramv2.png)
+## Overview
 
-### AVS User Flow
+The Lux Protocol AI Operator uses decentralized AI authentication to verify the authenticity of luxury goods. When a user submits an item for authentication, the system:
 
-1. AVS consumer requests a "Hello World" message to be generated and signed.
-2. HelloWorld contract receives the request and emits a NewTaskCreated event for the request.
-3. All Operators who are registered to the AVS and has staked, delegated assets takes this request. Operator generates the requested message, hashes it, and signs the hash with their private key.
-4. Each Operator submits their signed hash back to the HelloWorld AVS contract.
-5. If the Operator is registered to the AVS and has the minimum needed stake, the submission is accepted.
+1. Creates a task in the LuxServiceManager smart contract
+2. AI Operators detect the new task and process it using AI-based verification techniques
+3. Operators submit their authentication responses on-chain
+4. The item's provenance is recorded in the Collectible Registry
+5. Authentication results can be used by the NFT marketplace and NFC tag integration
 
-That's it. This simple flow highlights some of the core mechanics of how AVSs work.
+## Key Components
+
+### Smart Contracts
+
+-   **LuxServiceManager**: Manages authentication tasks and operator responses
+-   **AuthenticationController**: Handles authentication logic and verification rules
+-   **CollectibleRegistry**: Stores provenance records for authenticated items
+-   **NFCLuxuryMarketplace**: Marketplace for trading authenticated luxury NFTs
+-   **NFCCardFactory**: Creates digital representations linked to physical items
+
+### AI Operator
+
+The AI Operator is a Node.js application that:
+
+-   Monitors the blockchain for new authentication tasks
+-   Simulates (or implements) AI-based authentication
+-   Submits signed authentication responses to the LuxServiceManager
+
+## Setup and Installation
+
+### Prerequisites
+
+-   Node.js (v16+)
+-   Access to a local or remote Ethereum node (Anvil/Hardhat for local development)
+-   The Lux Protocol contracts deployed
+
+### Quick Start
+
+1. Clone the repository and install dependencies:
+
+    ```bash
+    git clone <repository-url>
+    cd luxavs
+    npm install
+    ```
+
+2. Start a local blockchain (for development):
+
+    ```bash
+    npm run start:anvil
+    ```
+
+3. In a new terminal, deploy the contracts:
+
+    ```bash
+    npm run deploy:core
+    npm run deploy:lux-service-manager
+    ```
+
+4. Set up the environment for the AI operator:
+
+    ```bash
+    node operator/ai-authenticator/setup-env.js
+    ```
+
+5. Grant the OPERATOR_ROLE to your wallet:
+
+    ```bash
+    ./operator/grant-operator-role.sh
+    ```
+
+6. Start the AI operator:
+
+    ```bash
+    node operator/ai-authenticator/simple-operator.js
+    ```
+
+7. Create a test task (in another terminal):
+    ```bash
+    cd contracts
+    forge script script/CreateTestTask.s.sol --broadcast --rpc-url http://localhost:8545
+    ```
+
+## Running the AI Operator
+
+The project includes two operator implementations:
+
+### Simple Operator
+
+The recommended implementation for most users:
+
+```bash
+node operator/ai-authenticator/simple-operator.js
+```
+
+### Full Operator
+
+A more complex implementation with additional features:
+
+```bash
+node operator/ai-authenticator/ai-operator.js
+```
+
+## Configuration
+
+The operators use these environment variables (stored in `.env`):
+
+| Variable                          | Description                                      | Default                               |
+| --------------------------------- | ------------------------------------------------ | ------------------------------------- |
+| RPC_URL                           | URL of the Ethereum node                         | http://localhost:8545                 |
+| PRIVATE_KEY                       | Private key for the operator wallet              | (For local chains: Anvil default key) |
+| LUX_SERVICE_MANAGER_ADDRESS       | Address of the LuxServiceManager contract        | (From deployment)                     |
+| AUTHENTICATION_CONTROLLER_ADDRESS | Address of the AuthenticationController contract | (From deployment)                     |
+| CONFIDENCE_THRESHOLD              | Threshold for authentication confidence          | 80                                    |
+| POLLING_INTERVAL                  | Milliseconds between polls for new tasks         | 15000                                 |
+| CHAIN_ID                          | Chain ID of the network                          | 31337                                 |
+
+## Troubleshooting
+
+If you encounter issues:
+
+1. Check your contract addresses:
+
+    ```bash
+    node operator/ai-authenticator/check-addresses.js
+    ```
+
+2. Ensure your wallet has the OPERATOR_ROLE:
+
+    ```bash
+    ./operator/grant-operator-role.sh <your-wallet-address>
+    ```
+
+3. Make sure required ABIs are in `operator/ai-authenticator/abis/`:
+
+    - LuxServiceManager.json
+    - AuthenticationController.json
+
+4. For signature verification issues:
+    - Check that the message hash creation matches the contract's implementation
+    - Verify the wallet has enough gas for transactions
+
+## Architecture Details
+
+The Lux Protocol uses a layered architecture:
+
+1. **Authentication Layer**: Verifies item authenticity using AI operators
+2. **Collectible Registry**: Stores provenance records and metadata
+3. **NFT and Marketplace**: Manages digital ownership and trading
+4. **Physical World**: Connects physical items through NFC tags
+5. **User Interaction**: Apps and interfaces for collectors and authenticators
+
+The AI operators provide the trust layer by verifying item authenticity through image analysis and metadata validation, with their responses secured by the Eigenlayer staking mechanism.
+
+## Development Guide
+
+To extend or modify the AI operator:
+
+1. Customize the authentication logic in `simulateAuthentication()` function
+2. Implement real AI verification by integrating with services like Google Vision API
+3. Enhance the response data with more detailed features and confidence metrics
+4. Update the error handling to fit your specific requirements
+
+## License
+
+MIT
+
+## Additional Resources
+
+-   [Eigenlayer Documentation](https://docs.eigenlayer.xyz/)
+-   [Lux Protocol Contracts](./contracts/)
 
 # Local Devnet Deployment
 
@@ -38,7 +198,7 @@ Install dependencies:
 
 ### Nix Environment
 
-On [Nix](https://nixos.org/) platforms, if you already have the proper Nix configuration, you can build the project’s artifacts inside a `nix develop` shell
+On [Nix](https://nixos.org/) platforms, if you already have the proper Nix configuration, you can build the project's artifacts inside a `nix develop` shell
 
 ```sh
 nix develop
