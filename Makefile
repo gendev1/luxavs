@@ -34,6 +34,10 @@ deploy-helloworld-contracts:
 						@chmod +x ./contracts/anvil/deploy-helloworld.sh
 						./contracts/anvil/deploy-helloworld.sh
 
+deploy-lux-service-manager:
+						@chmod +x ./contracts/anvil/deploy-lux-service-manager.sh
+						./contracts/anvil/deploy-lux-service-manager.sh
+
 __CLI__: ##
 
 send-fund: ## sends fund to the operator saved in tests/keys/test.ecdsa.key.json

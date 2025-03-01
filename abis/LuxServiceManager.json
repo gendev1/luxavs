@@ -138,21 +138,41 @@
     "name": "createNewTask",
     "inputs": [
       {
-        "name": "name",
-        "type": "string",
-        "internalType": "string"
+        "name": "imageHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "metadataHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "documentType",
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
     "outputs": [
       {
         "name": "",
         "type": "tuple",
-        "internalType": "struct IHelloWorldServiceManager.Task",
+        "internalType": "struct ILuxServiceManager.Task",
         "components": [
           {
-            "name": "name",
-            "type": "string",
-            "internalType": "string"
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
           },
           {
             "name": "taskCreatedBlock",
@@ -371,12 +391,22 @@
       {
         "name": "task",
         "type": "tuple",
-        "internalType": "struct IHelloWorldServiceManager.Task",
+        "internalType": "struct ILuxServiceManager.Task",
         "components": [
           {
-            "name": "name",
-            "type": "string",
-            "internalType": "string"
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
           },
           {
             "name": "taskCreatedBlock",
@@ -504,12 +534,22 @@
         "name": "task",
         "type": "tuple",
         "indexed": false,
-        "internalType": "struct IHelloWorldServiceManager.Task",
+        "internalType": "struct ILuxServiceManager.Task",
         "components": [
           {
-            "name": "name",
-            "type": "string",
-            "internalType": "string"
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
           },
           {
             "name": "taskCreatedBlock",
@@ -573,12 +613,22 @@
         "name": "task",
         "type": "tuple",
         "indexed": false,
-        "internalType": "struct IHelloWorldServiceManager.Task",
+        "internalType": "struct ILuxServiceManager.Task",
         "components": [
           {
-            "name": "name",
-            "type": "string",
-            "internalType": "string"
+            "name": "imageHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "metadataHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "documentType",
+            "type": "uint8",
+            "internalType": "uint8"
           },
           {
             "name": "taskCreatedBlock",
@@ -595,5 +645,20 @@
       }
     ],
     "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "DuplicateResponse",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "TaskMismatch",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "TaskResponseInvalid",
+    "inputs": []
   }
 ]
